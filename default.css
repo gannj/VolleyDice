@@ -1,75 +1,63 @@
+* { margin: 0, padding: 0 }
+
 a {text-decoration: none;}
 p{font-size:15px;}
 img{border:0;}
-.gadheadr{
-   width: 970px;
-   height: 90px;
-   text-align:center;
-   /*padding-top:50px;*/
-}
-.rightadr{
-   width: 300px;
-   height: 250px;
-}
-.rightadr2{
-   width: 300px;
-   height: 250px;
+
+html {
+    height:auto
+        
 }
 body {
 font: small font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-     transform: scale(0.86);
-   transform-origin: 0 0;
+     /*transform: scale(0.86);
+   transform-origin: 0 0;*/
 }
-h1, h2, h3 {font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";color: #385b88;}
+h1, h2, h3 {font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";color: #385b88;
+    margin-block-start:0.5em;
+    margin-block-end:0.5em;
+    width:100%;
+    margin:auto;
+    height:auto;
+    }
+p {
+    margin-block-start:0.5em;
+    margin-block-end:0.5em;
+}
 .footer {
-	width: 100%;
+	width: auto;
 	margin: auto;
-	margin-top:20px;
+	margin-top:0px;
 	text-align:left;
 	float:left;
 	/*overflow:hidden;*/
 	padding-top:5px;
 	padding-bottom:15px;
     padding-left:10px;
-	border-top: 1px solid #9fa4ff;
+	
     font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
 .header {
 	width: 100%;
-	height:auto;
+	height:50px;
 	margin: 0 auto;
 	padding: 0px 0px 0px 0px;
     text-align:left;
+  
    
-	/*border-bottom: 1px solid #9FA4FF;*/
+	
 	/*overflow:hidden;*/
 }
 
 .hline{
-	width:100%;
+	width:auto;
 	/*overflow:hidden;*/
 	padding-top:10px;
     padding-left:5px;
 	padding-bottom:0px;
 	margin-bottom:0px;	
+    
 }
-
-.schsuggest {
-  z-index:200;
-  position:absolute;
-  left:210px;
-  top:35px;
-  font-size:14px;
-  width:310px;
-}
-
-.sidebar{
-    margin: 0 auto;
-	width: 300px;
-	float:right;
-}
-
-.sidebar a{font-size:15px;color:#222222;}
 
 .content{
 	width: 100%;
@@ -80,12 +68,11 @@ h1, h2, h3 {font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Ne
 .main{
 	/*padding: 0px 0px 0px 0px;
 	margin: 0px 0px 0px 0px;*/
-    	padding-top:0px;
-    width:100%;
-    float:left;
+    padding-top:0px;
+    width:90%;
     height:auto;
     padding-left:30px;
-    padding-bottom:40px;
+    padding-bottom:2px;
     font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
 
@@ -93,67 +80,14 @@ h1, h2, h3 {font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Ne
 	float: left;
 	text-align:left;
 	color: #EEEEEE;
+    width:100%
 }
 #logo h1 {
 	margin: auto;
     height:auto;
 	font-size: 2.3em;
-}
-
-.hmenu{
- float:right;
- display:block;
- padding-top:7px;
-}
-
-
-.schtxt{
-    float:left;
-	width:300px;
-	padding:0 5px;
-	height:32px;
-	background:#fff;
-	border: 1px solid #9FA4FF;
-	border-bottom: 2px solid #9FA4FF;
-	margin-left:10px;
-	font-size:17px;
-	border-top-left-radius:3px;
-	border-bottom-left-radius:3px;
-}
-
-.schtxt:focus{
-	border-bottom: 1px solid #9FA4FF;
-	border-top-right-radius:4px;
-}
-
-.schbtn{
-	float:left;
-	height:35px;
-	color:#222222;
-	background:#9FA4FF;
-	text-shadow:#666666 1px 0px;
-	border-top:#9FA4FF 2px solid;
-	border-bottom:none;
-	padding:0 7px;
-	border-left:none;
-	border-right:none;
-	font-size:16px;
-	border-top-right-radius:3px;
-	border-bottom-right-radius:3px;
-}
-
-.mainsuggest_link{
-background-color: #fbfbfe;
-padding: 0px 0px 0px 0px;
-border:1px solid #9FA4FF;
-border-top:none;
-}
-
-.mainsuggest_link_over{
-background-color: #D1E0A4;
-cursor: pointer;
-border:1px solid #9FA4FF;
-border-top:none;
+    display:block;
+    width:100%
 }
 
 .title{
@@ -163,66 +97,6 @@ border-top:none;
 	width:100%;
 	margin-bottom:5px;
 	overflow:hidden;
-}
-
-.mline{
-   width:100%;
-   overflow:hidden;
-   font-size:16px;
-   /*padding-top:10px;
-border:1px solid #9FA4FF;*/   
-}
-.mlabel{
-   width:45%;
-   font-size:16px;
-   text-align:right;
-   float:left;
-   margin-top:11px;
-   /*border: 1px dotted #385B88;*/
-}
-.mbox{
-	width:54%;
-	font-size:20px;
-	float:left;
-	margin-top:7px;
-}
-.mbox{
-	margin-top:11px;
-	margin-bottom:6px;
-}
-
-.mbox input, .mbox select{
-    width:70%;
-	float:left;
-	font-size:20px;
-	height:28px;
-	margin-left:2%;
-	border: 1px solid #9FA4FF;
-	/*background-color: #FFFFEE;*/
-}
-
-.cal, .mcalc{
-	width:100%;
-	margin-top:0px;
-	margin-bottom:0px;
-	overflow:hidden;
-}
-
-.mcalc{
-	/*float:left;*/
-	/*padding-left:41%;*/
-	/*overflow:hidden;*/
-}
-
-.mcalc input, .cal input{width:82px;height:28px;font-size: 16px;}
-
-.stitle{BORDER-BOTTOM: #9FA4FF 1px solid; HEIGHT: 22px}
-.sline{BORDER-BOTTOM: #e4e4e4 1px dashed; HEIGHT: 24px}
-
-.sboxed  {
-	padding: 1px;
-	border: 1px solid #9FA4FF;
-	color: #385B88;		
 }
 
 /* --------------------------------------------------- */
@@ -237,14 +111,7 @@ border:1px solid #9FA4FF;*/
 	.header{
 		width: 100%;
 	}
-	.adtop{
-		width: 100%;
-	}
-	.gadheadr{
-	   width: 728px;
-	   height: 90px;
-	   text-align:center;
-	}	
+
 	.footer{
 		width: 100%;
 	}
@@ -261,10 +128,10 @@ border:1px solid #9FA4FF;*/
 	    width: 100%;
 		/*overflow:hidden;*/
 	}	
-	.sidebar{display:none;}
+
 	#logo {
-		width: 180px;
-		text-align:center;
+		width: auto;
+		text-align:left;
 		margin-top:0px;
 	}	
 	
@@ -273,20 +140,13 @@ border:1px solid #9FA4FF;*/
 		text-align:right;
 	}
 
-    .schtxt{width:40%;}
-	.schsuggest{
-	    width:42%;
-		left:190px;
-	}
-	.footer{margin-top:60px;}	
+
+	.footer{margin-top:20px;}	
 }
 
 @media screen and (max-width:730px)
 {
-	.gadheadr{
-	   width: 468px;
-	   height: 60px;
-	}	
+
 }
 
 @media screen and (max-width:650px)
@@ -308,22 +168,6 @@ border:1px solid #9FA4FF;*/
 		padding-top:0px;
 		/*cursor:pointer;*/
 	}
-	
-    .schtxt{width:60%;margin-left:10px;margin-top:10px;}
-    .schbtn{margin-top:10px;}
-	
-	.schsuggest {
-	  left:11px;
-	  top:73px;
-	  width:102%;
-	  font-size:14px;
-	}
-	
-	.mainsuggest_link{
-	width:60%;}
-		
-	.mainsuggest_link_over{
-	width:60%;}
 
 }
 
@@ -331,10 +175,6 @@ border:1px solid #9FA4FF;*/
 {
     .max480{font-size:30px;}
 	
-	.gadheadr{
-	   width: 320px;
-	   height: 50px;
-	}	
 	#logo h1 {
 		font-size: 1.9em;
 	}
@@ -342,64 +182,18 @@ border:1px solid #9FA4FF;*/
 	.header{
 	   height:79px;
 	}
-	
-    .schtxt{margin-left:2%;}
-	.schsuggest {
-	  top:68px;
-	  width:102%;
-	}
-	
-	.calc .box{
-		margin-top:5px;
-		margin-bottom:8px;
-	}
-
-	.input{
-	width:90%;
-	padding-right:2px;
-	}
-	
-	.label{width:100%;font-size:15px;text-align:left;}
-	.box{width:100%;padding-left:0px;margin-top:2px;}
-	
-    .mav{
-		padding-top:5px;
-		padding-bottom:5px;
-	}	
 }
 
 @media screen and (max-width:320px)
 {
     .max320{font-size:30px;}
-    .schtxt{margin-left:0px;}
-	.schsuggest {
-	  left:0px;
-	  top:69px;
-	  width:140%;
-	  font-size:14px;
-	}
 
-	.calc{
-	margin-left:0px;
-	}
-	
-	.gadheadr{
-	   width: 234px;
-	   height: 60px;
-	}
-
-    .nav{
-		font-size: 0.9em;
-	}	
 }
 
 @media screen and (max-width:220px)
 {
     .max200{font-size:30px;}
-
-	.schtxt{width:110px;}
 	.content{width:240px;}
 	.header{width:240px;}
-	.adtop{width:240px;}
 	.footer{width:240px;}
 }
