@@ -1,21 +1,26 @@
 <!-- 🏐 VOLLEYDICE 🎲 - Volleyball Rotation Randomiser --> 
-<!-- © Jared Tan 08/22 (I'm not a web developer) -->
+<!-- © Jared Tan 08/22 -->
+<!-- https://github.com/BOMBZ-INFORME/VolleyDice -->
+<!-- (I'm not a web developer, I don't know what I'm doing, and this spaghetti code is trash :c) -->
+<!-- (If you are here reading this, I'm very sorry to give you brain damage) -->
+<!-- 130822 NYI: enable player numbers, enable preferences, 6 player rotation case -->
+
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Refresh" content="0;URL=https://www.volleydice.com" />
+        <!-- <meta http-equiv="Refresh" content="0;URL=https://www.volleydice.com" /> -->
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width; initial-scale=1.0" />
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <title>🏐 VOLLEYDICE 🎲 - Volleyball Rotation Randomiser</title>
         <meta name="keywords" content="🏐 VOLLEYDICE 🎲 - Volleyball Rotation Randomiser" />
-        <meta name="description" content="🏐 VOLLEYDICE 🎲 - A simple webtool to randomly select your volleyball team's rotation." />
+        <meta name="description" content="🏐 VOLLEYDICE 🎲 - Volleyball Rotation Randomiser. A simple webtool to randomly generate your volleyball team's rotation." />
         <link href="/default.css" rel="stylesheet" type="text/css" />
-        <link rel="icon" href="dice.png" type="image/x-icon" />
-        <link rel="shortcut icon" href="dice.png"/>
+        <link rel="icon" href="volleydice.png" type="image/x-icon" />
+        <link rel="shortcut icon" href="volleydice.png"/>
         <script type="text/javascript" src="script.js"></script>
-        <meta property="og:image" content="dice.png"/>
-        <meta property="og:site_name" content="VOLLEYDICE.com"/>
+        <meta property="og:image" content="volleydice.png"/>
+        <meta property="og:site_name" content="🏐 VOLLEYDICE 🎲 - Volleyball Rotation Randomiser"/>
     </head>
 
     <style type="text/css">
@@ -24,15 +29,15 @@
   overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
   font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-0lax{text-align:center;vertical-align:center;}
+.tg .tg-0lax{text-align:center;vertical-align:center;padding-top:4px;padding-bottom:4px;}
     
 .tz  {border-collapse:collapse;border-spacing:0;}
 .tz td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
   overflow:hidden;padding:10px 5px;word-break:normal;}
 .tz th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
   font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tz .tg-001g{background-color:#dae8fc;border-color:#000000;font-family:inherit;font-weight:bold;text-align:left;vertical-align:top}
-.tz .tg-zbu7{border-color:#000000;font-family:inherit;text-align:left;vertical-align:top}
+.tz .tg-001g{background-color:#dae8fc;border-color:#000000;font-family:inherit;font-weight:bold;text-align:left;vertical-align:center}
+.tz .tg-zbu7{border-color:#000000;font-family:inherit;text-align:left;vertical-align:center}
 
         bl {
             color: blue;
@@ -56,35 +61,35 @@
     </style>
 
 
-<body>
-          <div class="header" style="float:left;overflow:hidden;width:auto;padding-right:30px;text-align:left;height:50px">
+<body style="width:auto; margin-right:0px">
+          <div class="header" style="float:left;overflow:hidden;width:auto;padding-right:0px;text-align:left;height:auto;">
             
-                <div id="logo" style="float:left;margin-left:10px; overflow:hidden; width:650px;padding-right:30px">
-                    <h1 style="overflow:hidden;text-align:left;float:left;"><font color="#0000AA" style="text-shadow: 2px 2px 2px #cccccc;">🏐 VOLLEYDICE.com 🎲</font></h1>
+                <div id="logo" style="float:left;margin-left:10px; overflow:hidden; width:auto;padding-right:0px">
+                    <h1 style="overflow:hidden;text-align:left;float:left;margin-top:0px"><font color="#0000AA" style="text-shadow: 2px 2px 2px #cccccc;">🏐 VOLLEYDICE.com 🎲</font></h1>
                 </div>
                
          </div>
     
-    <div class="main" style="display:block;padding-left:30px;float:left"><h2 style="border-bottom: 1px solid #9FA4FF; text-align:left; vertical-align:center; padding-top:2px; width:650px; float:left"><font color="#0000AA" style="font-size:20px;">Volleyball Rotation Randomiser</font></h2></div>
+    <div class="main" style="display:block;padding-left:5px;float:left;width:90%"><h2 style="border-bottom: 1px solid #9FA4FF; text-align:left; vertical-align:center; padding-top:0px; width:auto;padding-right:0px; float:left"><font color="#0000AA" style="font-size:20px;">Volleyball Rotation Randomiser</font></h2></div>
      
     
-<div class="main" style="padding-right:30px;width:90%;float:left">
+<div class="main" style="padding-right:30px;width:90%;float:left;padding-left:10px">
            
-    <p style="padding-top:5px; width:auto;padding-right:30px;"> Fill out your team list (6-7 players). Click 'Randomise!' to generate a random rotation.</p> </div>
+    <p style="padding-top:0px; width:auto;padding-right:30px;vertical-align:top;margin-top:2px;font-size:13.5px"> Fill out your team list (6-7 players). Click 'Randomise!' to generate a rotation.</p> </div>
      
-<div class="main" style="padding-right:0px;width:auto;float:left">
-<table class="tz" style="width:auto; display:inline; padding-right:10px;">
+<div class="main" style="padding-right:0px;width:auto;float:left;padding-left:7px">
+<table class="tz" style="width:auto; display:inline; padding-right:10px;padding-left:10px">
 <thead>
   <tr>
-    <th class="tg-001g">Player #</th>
-    <th class="tg-001g">Name</th>
+    <th class="tg-001g" style="padding-top:2px;padding-bottom:2px;vertical-align: middle">Player #</th>
+    <th class="tg-001g" style="padding-top:2px;padding-bottom:2px;vertical-align: middle">Name</th>
+      <th class="tg-001g" style="padding-top:2px;padding-bottom:2px;vertical-align: middle">Preference</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td class="tg-zbu7">
-        <textarea id="playernumber"; rows="7"; cols = "1" style="width:50px; background-color:lightyellow; margin-top:3px;font-size=20px;resize: none"; wrap="off"; spellcheck="false";>
-1
+    <td class="tg-zbu7" style="padding-bottom:0px;padding-top:0px;height:auto;background-color:lightyellow;margin-bottom:0px">
+        <textarea id="playernumber"; rows="6"; cols = "1" style="width:50px; background-color:lightyellow;border:none; margin-top:0px;font-size=20px;resize:none;padding-bottom:0px"; wrap="off"; spellcheck="false";>1
 2
 3
 4
@@ -92,9 +97,8 @@
 6
 7</textarea>
       </td>
-    <td class="tg-zbu7">
-      <textarea id="playername" rows="7"; cols = "1" style="width:100px; background-color:lightyellow; margin-top:3px; font-size=20px;resize: none"; wrap="off"; spellcheck="false";>
-Bond
+    <td class="tg-zbu7" style="padding-bottom:0px;padding-top:0px;height:auto;background-color:lightyellow;">
+      <textarea id="playername" rows="6"; cols = "1" style="width:80px; background-color:lightyellow; margin-top:0x; font-size=20px;resize:none;border:none;padding-bottom:0px"; wrap="off"; spellcheck="false";>Bond
 JH
 Nic
 JT
@@ -102,49 +106,164 @@ Remy
 Eddy
 Chap</textarea>
           </td>
-  </tr>
+  <td class="tg-zbu7" style="padding-bottom:0px;padding-top:0px;height:auto;background-color:lightyellow;font-size:10px">
+<select name="preference1" id="preference1" style="font-size:10px">
+     <option value="Any">Any</option>
+  <option value="+Middle">+Middle</option>
+  <option value="-Middle">-Middle</option>
+  <option value="+Setter">+Setter</option>
+      <option value="+Setter">+Setter</option>
+  <option value="+Pass Hit">+Pass Hit</option>
+      <option value="-Pass Hit">-Pass Hit</option>
+      <option value="+Opposite">+Opposite</option>
+          <option value="-Opposite">-Opposite</option>
+      <option value="+Libero">+Libero</option>
+         <option value="-Libero">-Libero</option>
+</select><br>
+      <select name="preference2" id="preference2" style="font-size:10px">
+               <option value="Any">Any</option>
+  <option value="+Middle">+Middle</option>
+  <option value="-Middle">-Middle</option>
+  <option value="+Setter">+Setter</option>
+      <option value="+Setter">+Setter</option>
+  <option value="+Pass Hit">+Pass Hit</option>
+      <option value="-Pass Hit">-Pass Hit</option>
+      <option value="+Opposite">+Opposite</option>
+          <option value="-Opposite">-Opposite</option>
+      <option value="+Libero">+Libero</option>
+         <option value="-Libero">-Libero</option>
+</select><br>
+      <select name="preference3" id="preference3" style="font-size:10px">
+       <option value="Any">Any</option>
+  <option value="+Middle">+Middle</option>
+  <option value="-Middle">-Middle</option>
+  <option value="+Setter">+Setter</option>
+      <option value="+Setter">+Setter</option>
+  <option value="+Pass Hit">+Pass Hit</option>
+      <option value="-Pass Hit">-Pass Hit</option>
+      <option value="+Opposite">+Opposite</option>
+          <option value="-Opposite">-Opposite</option>
+      <option value="+Libero">+Libero</option>
+         <option value="-Libero">-Libero</option>
+</select><br>
+      <select name="preference4" id="preference4" style="font-size:10px">
+     <option value="Any">Any</option>
+  <option value="+Middle">+Middle</option>
+  <option value="-Middle">-Middle</option>
+  <option value="+Setter">+Setter</option>
+      <option value="+Setter">+Setter</option>
+  <option value="+Pass Hit">+Pass Hit</option>
+      <option value="-Pass Hit">-Pass Hit</option>
+      <option value="+Opposite">+Opposite</option>
+          <option value="-Opposite">-Opposite</option>
+      <option value="+Libero">+Libero</option>
+         <option value="-Libero">-Libero</option>
+</select><br>
+      <select name="preference5" id="preference5" style="font-size:10px">
+      <option value="Any">Any</option>
+  <option value="+Middle">+Middle</option>
+  <option value="-Middle">-Middle</option>
+  <option value="+Setter">+Setter</option>
+      <option value="+Setter">+Setter</option>
+  <option value="+Pass Hit">+Pass Hit</option>
+      <option value="-Pass Hit">-Pass Hit</option>
+      <option value="+Opposite">+Opposite</option>
+          <option value="-Opposite">-Opposite</option>
+      <option value="+Libero">+Libero</option>
+         <option value="-Libero">-Libero</option>
+</select><br>
+      <select name="preference6" id="preference6" style="font-size:10px">
+      <option value="Any">Any</option>
+  <option value="+Middle">+Middle</option>
+  <option value="-Middle">-Middle</option>
+  <option value="+Setter">+Setter</option>
+      <option value="+Setter">+Setter</option>
+  <option value="+Pass Hit">+Pass Hit</option>
+      <option value="-Pass Hit">-Pass Hit</option>
+      <option value="+Opposite">+Opposite</option>
+          <option value="-Opposite">-Opposite</option>
+      <option value="+Libero">+Libero</option>
+         <option value="-Libero">-Libero</option>
+</select><br>
+      <select name="preference7" id="preference7" style="font-size:10px">
+                <option value="Any">Any</option>
+  <option value="+Middle">+Middle</option>
+  <option value="-Middle">-Middle</option>
+  <option value="+Setter">+Setter</option>
+      <option value="+Setter">+Setter</option>
+  <option value="+Pass Hit">+Pass Hit</option>
+      <option value="-Pass Hit">-Pass Hit</option>
+      <option value="+Opposite">+Opposite</option>
+          <option value="-Opposite">-Opposite</option>
+      <option value="+Libero">+Libero</option>
+         <option value="-Libero">-Libero</option>                                          
+</select><br>
+
+      
+      <!--  <textarea id="preference" rows="6"; cols = "1" style="width:80px; background-color:lightyellow; margin-top:0px; font-size=20px;resize: none;border:none;padding-bottom:0px"; wrap="off"; spellcheck="false";>-Middle
++Pass Hit
++Setter
+Any
+NOT YET
+IMPLEMENTED
+WIP</textarea> -->
+      
+      </td>
+    </tr>
 </tbody>  
     </table></div>
         
-               
-    <div class="main" style="align-items:center">
-        
+    
+  
+    <div class="main" style="align-items:center;width:100%">
+  <div style="height:148px;width:100%;align-items:center"></div>
             <button type="submit" onclick="shufflearray();" class="btn btn-primary btn-lg" style="float:left"><svg class="svg-inline--fa fa-dice fa-w-20" aria-hidden="true" focusable="false" data-prefix="fa-solid" data-icon="dice" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg=""><path height="80" width="80" fill="#FF3131" d="M447.1 224c0-12.56-4.781-25.13-14.35-34.76l-174.9-174.9C249.1 4.786 236.5 0 223.1 0C211.4 0 198.9 4.786 189.2 14.35L14.35 189.2C4.783 198.9-.0011 211.4-.0011 223.1c0 12.56 4.785 25.17 14.35 34.8l174.9 174.9c9.625 9.562 22.19 14.35 34.75 14.35s25.13-4.783 34.75-14.35l174.9-174.9C443.2 249.1 447.1 236.6 447.1 224zM96 248c-13.25 0-23.1-10.75-23.1-23.1s10.75-23.1 23.1-23.1S120 210.8 120 224S109.3 248 96 248zM224 376c-13.25 0-23.1-10.75-23.1-23.1s10.75-23.1 23.1-23.1s23.1 10.75 23.1 23.1S237.3 376 224 376zM224 248c-13.25 0-23.1-10.75-23.1-23.1s10.75-23.1 23.1-23.1S248 210.8 248 224S237.3 248 224 248zM224 120c-13.25 0-23.1-10.75-23.1-23.1s10.75-23.1 23.1-23.1s23.1 10.75 23.1 23.1S237.3 120 224 120zM352 248c-13.25 0-23.1-10.75-23.1-23.1s10.75-23.1 23.1-23.1s23.1 10.75 23.1 23.1S365.3 248 352 248zM591.1 192l-118.7 0c4.418 10.27 6.604 21.25 6.604 32.23c0 20.7-7.865 41.38-23.63 57.14l-136.2 136.2v46.37C320 490.5 341.5 512 368 512h223.1c26.5 0 47.1-21.5 47.1-47.1V240C639.1 213.5 618.5 192 591.1 192zM479.1 376c-13.25 0-23.1-10.75-23.1-23.1s10.75-23.1 23.1-23.1s23.1 10.75 23.1 23.1S493.2 376 479.1 376z"></path></svg><b>Randomise!</b>
                 </div>       
     
-                   
-                <div class="main" style="padding-left:30px; width=100%;float:left">
-            <button type="reset" onclick="cleartext();"><b>Clear Team List</b>
+   
+                <div class="main" style="padding-left:13px; width=100%;float:left;text-align: left;vertical-align:top;padding-bottom:0px">
+                    
+                    <input type="checkbox" id="enableplayernumbers" name="enableplayernumbers" value="playernumbers-on" style="margin-right:0px;margin-top:0px;vertical-align:middle">
+                    <label for="enableplayernumbers" style=""><b><font style="font-size: 12px">Display Player Numbers</font></b></label></div>
+        
+              <div class="main" style="padding-left:13px; width=100%;float:left;text-align: left;vertical-align:top">
+                    
+<input type="checkbox" id="enablepreference" name="enablepreference" value="preference-on" style="margin-right:0px;margin-top:0px;vertical-align:middle">
+                    <label for="enablepreference" style=""><b><font style="font-size: 12px">Enable Preferences</font></b></label>
+                </div>
+
+                <div class="main" style="padding-left:17px; width=100%;float:left;">
+            <button type="reset" onclick="cleartext();"><b><font style="font-size:12px">Clear Team List</font></b>
                  </button>
                 </div>
                 
-    <div class="main" style="padding-left:30px; width=100%;float:left;padding-bottom:1px">
-    <p id="rotation"> <!-- print rotation table -->  </p> 
+    <div class="main" style="padding-left:5px; width=100%;float:left;padding-bottom:1px;margin:0px">
+    <p id="rotation" style="margin:0px"> <!-- print rotation table -->  </p> 
     
  <h3 style="padding-top:6px;padding-bottom:3px"><b><font color="#0000AA" style="border-bottom: 1px solid #9FA4FF; font-size:18px;">Randomised Team Rotation:</font></b></h3>
-<table class="tg" style="border-spacing:2.5px; padding-right:30px"> 
+<table class="tg" style="border-spacing:2.5px; padding-right:30px;padding-left:10px"> 
 <thead> 
   <tr>
-    <th class="tg-0lax" width=200px><b>IV - Opposite / Setter</b></th> 
-    <th class="tg-0lax" width=200px><b>III - Middle</b></th>
-    <th class="tg-0lax" width=200px><b>II - Pass Hit</b></th>
+    <th class="tg-0lax" width=150px style="padding-top:2px;padding-bottom:2px"><b>IV - Opposite / Setter</b></th> 
+    <th class="tg-0lax" width=150px style="padding-top:2px;padding-bottom:2px"><b>III - Middle</b></th>
+    <th class="tg-0lax" width=150px style="padding-top:2px;padding-bottom:2px"><b>II - Pass Hit</b></th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td class="tg-0lax" width=200px height=50px>   <p id="r4"></p>  </td>
-    <td class="tg-0lax" width=200px>   <p id="r3"></p>       </td>
-    <td class="tg-0lax" width=200px>     <p id="r2"></p>   </td>
+    <td class="tg-0lax" width=150px height=50px>   <p id="r4" style="font-size:13px"></p>  </td>
+    <td class="tg-0lax" width=150px>   <p id="r3" style="font-size:13px"></p>       </td>
+    <td class="tg-0lax" width=150px>     <p id="r2" style="font-size:13px"></p>   </td>
   </tr>
   <tr>
-    <td class="tg-0lax" width=200px><b>V - Pass Hit</b></td>
-    <td class="tg-0lax" width=200px><b>VI - Libero / Middle</b></td>
-    <td class="tg-0lax" width=200px><b>I - Setter</b></td>
+    <td class="tg-0lax" width=150px style="padding-top:2px;padding-bottom:2px"><b>V - Pass Hit</b></td>
+    <td class="tg-0lax" width=150px style="padding-top:2px;padding-bottom:2px"><b>VI - Libero / Middle</b></td>
+    <td class="tg-0lax" width=150px style="padding-top:2px;padding-bottom:2px"><b>I - Setter</b></td>
   </tr>
   <tr>
-    <td class="tg-0lax" width=200px height=50px>   <p id="r5"></p>   </td>
-      <td class="tg-0lax" width=200px>  <p id="r6" style="margin-top:1px;margin-bottom:0px"></p> <p id="r7" style="margin-top:3px"></p>  </td>
-    <td class="tg-0lax" width=200px> <p id="r1"></p>    </td>  
+    <td class="tg-0lax" width=150px height=50px>   <p id="r5" style="font-size:13px"></p>   </td>
+      <td class="tg-0lax" width=150px>  <p id="r6" style="margin-top:1px;margin-bottom:0px;font-size:13px"></p> <p id="r7" style="margin-top:3px;font-size:13px"></p>  </td>
+    <td class="tg-0lax" width=150px> <p id="r1" style="font-size:13px"></p>    </td>  
   </tr> 
 </tbody>
 </table>
@@ -154,9 +273,9 @@ Chap</textarea>
  </div>
                              
             
-            <div class="footer" style="padding-left:30px;margin:0px;margin-bottom:3px"> <!-- FOOTER -->
+            <div class="footer" style="padding-left:5px;margin:0px;margin-bottom:3px"> <!-- FOOTER -->
                               <div id="sharebox">
-				<div id="sharetool" style="border-top: 1px solid #9fa4ff; width:650px">
+				<div id="sharetool" style="border-top: 1px solid #9fa4ff; width:90%">
 					<strong>Share VOLLEYDICE.com:</strong><br>
                     
 					<span>
@@ -189,7 +308,7 @@ Chap</textarea>
 				</div>
                     
                 <font color="black" style="font-size: 13px;">
-                    <font color="black"><img src=pepega.png.webp title="Powered by Pepega" alt="Powered by Pepega" width="24" height="24" viewBox="0 0 20 20"> &nbsp;Jared T </font> &copy; 08/2022 &nbsp;
+                    <font color="black"><img src=/Assets/pepega.png.webp title="Powered by Pepega" alt="Powered by Pepega" width="24" height="24" viewBox="0 0 20 20"> &nbsp;Jared T </font> &copy; 08/2022 &nbsp;
                     <a href="https://www.instagram.com/jareds.pretty.tan/">
                         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16"><path
                                 d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
