@@ -18,7 +18,7 @@
         <link rel="stylesheet" href="default.css">
         <link rel="icon" href="volleydice.png" type="image/x-icon" />
         <link rel="shortcut icon" href="volleydice.png"/>
-        <script type="text/javascript" src="script.js"></script>
+        <script src="script.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <meta property="og:image" content="volleydice.png"/>
         <meta property="og:site_name" content="🏐 VOLLEYDICE 🎲 - Volleyball Rotation Randomiser"/>
@@ -32,42 +32,20 @@
 <!-- team input table-->
 <div class="inputTable">
     <p> Fill out your team list (6-7 players). Click 'Randomise!' to generate a rotation.</p>
-    <div class="">
-    <tableOne>
-        <thead>
-            <tr>
-                <td class="tg-001g">Player #</th>
-                <td class="tg-001g">Name</th>
-             </tr>
-        </thead>
-        <tbody>
-            <tr>
-            <td class="tg-zbu7">
-            <textarea id="playernumber"; rows="6"; cols = "1" >
-                1
-                2
-                3
-                4
-                5
-                6
-                7
-            </textarea>
-            </td>
-            <td class="tg-zbu7">
-            <textarea id="playername" rows="6"; cols = "1" >
-                Bond
-                JH
-                Nic
-                JT
-                Remy
-                Eddy
-                Chap
-            </textarea>
-            </td>
-        </tr>
-</tbody>  
-    </div>
+<div class="addPlayer">
+    <input type="text" id="newPlayer" placeholder="Player Name"><button onclick="addPlayer()">Add!</button>
 </div>
+
+<table id="playerTable">
+    <thead>
+        <tr>
+            <th>Players</th>
+        </tr>
+    </thead>
+    <tbody id="playerList">
+    </tbody>
+</table>
+
     
 <!-- randomise button-->
 <button type="submit" onclick="shufflearray();" class="btn btn-primary btn-lg">
