@@ -1,116 +1,48 @@
-function getFormattedDate() {
-    /*to display timestamp*/
-    var date = new Date();
+var playerList = ["JT","nic","eddy","bond","chap","johan","player7"];
 
-    var month = date.getMonth() + 1;
-    var day = date.getDate();
-    var hour = date.getHours();
-    var min = date.getMinutes();
-    var sec = date.getSeconds();
+/* add player button - adds player to array and displays in table */
+function addPlayer() {
+    var nHTML = '';
+    let data = document.getElementById('newPlayer');
+    playerList.push(data.value);
+    console.log(playerList);
+    document.getElementById("newPlayer").value = "";
 
-    month = (month < 10 ? "0" : "") + month;
-    day = (day < 10 ? "0" : "") + day;
-    hour = (hour < 10 ? "0" : "") + hour;
-    min = (min < 10 ? "0" : "") + min;
-    sec = (sec < 10 ? "0" : "") + sec;
-
-    if (hour >= 13) {
-        hour = hour - 12;
-        mtime = "PM";
-    } else {
-        mtime = "AM";
-    }
-
-    var str = "Generated at " + hour + ":" + min + ":" + sec + " " + mtime + ", " + day + "/" + month + "/" + date.getFullYear();
-
-    return str;
+    playerList.forEach(function(item) {
+        nHTML += '<tr><td>' + item + '</tr></td>';
+      });
+    
+      document.getElementById("playerList").innerHTML = nHTML
 }
 
+/* on load array team list population */
+window.onload = function() {
+    var nHTML = '';
+    playerList.forEach(function(item) {
+        nHTML += '<tr><td>' + item + '</tr></td>';
+      });
+    
+      document.getElementById("playerList").innerHTML = nHTML
+  };
+
+/* shuffle and print the array */
 function shufflearray() {
-    /*Durstenfeld shuffle*/
-    var names = document.getElementById("playername");
-    var namearray = names.value.replace(/\r\n/g, "\n").split("\n");
-
-    var numbers = document.getElementById("playernumber");
-    var numberarray = numbers.value.replace(/\r\n/g, "\n").split("\n");
-
-    var array = [];
-
-    var arr = [];
-    for (var k = 0; k < namearray.length; k++) {
-        arr[k] = [numberarray[k], namearray[k]];
-        /*console.log(arr[k]) */
-        array.push(arr[k]);
-    }
-
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-
-    /*console.log(array)
-
-CREATE TABLE FOR ROTATION*/
-    /*to create table      function createTable(tableData) { 
-              var table = document.createElement('table');
-              var tableBody = document.createElement('tbody');
-
-              tableData.forEach(function(rowData) {
-                var row = document.createElement('tr');
-
-                rowData.forEach(function(cellData) {
-                  var cell = document.createElement('td');
-                  cell.appendChild(document.createTextNode(cellData));
-                  row.appendChild(cell);
-                });
-
-                tableBody.appendChild(row);
-              });
-
-              table.appendChild(tableBody);
-              document.body.appendChild(table);
-            }
-
-    rotationtable = createTable([array]); */
-
-    /*    
-       function makeTableHTML(myArray) {
-            var result = "<table border=1>";
-            for(var i=0; i<myArray.length; i++) {
-                result += "<tr>";
-                for(var j=0; j<myArray[i].length; j++){
-                    result += "<td>"+myArray[i][j]+"</td>";
-                }
-                result += "</tr>";
-            }
-            result += "</table>";
-            return result;
+        var array=playerList;
+        for (var i = array.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
         }
-    
-    result = makeTableHTML(array);
-    
-    document.getElementById("rotation").innerHTML = result; */
+    console.log(JSON.stringify(array));
 
-    /*console.log(array[0][1])
-   console.log(array[1][1])
-   console.log(array[2][1])
-   console.log(array[3][1])
-   console.log(array[4][1])
-   console.log(array[5][1])
-   console.log(array[6][1])
-   console.log(array[7][1]) */
-
-    document.getElementById("r1").innerHTML = "#" + array[0][0] + " " + array[0][1];
-    document.getElementById("r2").innerHTML = "#" + array[1][0] + " " + array[1][1];
-    document.getElementById("r3").innerHTML = "#" + array[2][0] + " " + array[2][1];
-    document.getElementById("r4").innerHTML = "#" + array[3][0] + " " + array[3][1];
-    document.getElementById("r5").innerHTML = "#" + array[4][0] + " " + array[4][1];
-
-    document.getElementById("r6").innerHTML = "#" + array[5][0] + " " + array[5][1] + " " + "(L)" + ",";
-    document.getElementById("r7").innerHTML = "#" + array[6][0] + " " + array[6][1] + " " + "(M)";
-
-    /*print timestamp*/
-    document.getElementById("timestamp").innerHTML = getFormattedDate();
+    document.getElementById("r1").innerHTML = array[0];
+    document.getElementById("r2").innerHTML = array[1];
+    document.getElementById("r3").innerHTML = array[2];
+    document.getElementById("r4").innerHTML = array[3];
+    document.getElementById("r5").innerHTML = array[4];
+    document.getElementById("r6").innerHTML = array[5];
+    /*document.getElementById("r7").innerHTML = array[6];*/
 }
 
 function cleartext() {

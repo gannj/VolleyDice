@@ -48,8 +48,8 @@
 
     
 <!-- randomise button-->
-<button type="submit" onclick="shufflearray();" class="btn btn-primary btn-lg">
-    <img src="icons/dice.png"></img>
+<button id="randombutton" type="submit" onclick="shufflearray();" class="btn btn-primary btn-lg">
+    <!--<img src="icons/dice.png"></img>-->
     <b>Randomise!</b>
 </button>
     </div>       
@@ -66,9 +66,9 @@
 </thead>
 <tbody>
   <tr>
-    <td class="tg-0lax"><p></p></td>
-    <td class="tg-0lax"><p></p></td>
-    <td class="tg-0lax"><p></p></td>
+    <td class="tg-0lax" id="r4"></td>
+    <td class="tg-0lax" id="r2"></td>
+    <td class="tg-0lax" id="r3"></td>
   </tr>
   <tr>
     <td class="tg-0lax"><b>5 - Pass Hit</b></td>
@@ -76,9 +76,9 @@
     <td class="tg-0lax"><b>1 - Setter</b></td>
   </tr>
   <tr>
-    <td class="tg-0lax"><p id="r5"></p></td>
-      <td class="tg-0lax"><p id="r6"></p> <p id="r7"></p></td>
-    <td class="tg-0lax"><p id="r1"></p></td>  
+    <td class="tg-0lax" id="r5"></td>
+    <td class="tg-0lax" id="r6"></td>
+    <td class="tg-0lax" id="r1"></td>  
   </tr> 
 </tbody>
 </table>
