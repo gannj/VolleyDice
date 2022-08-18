@@ -9,17 +9,20 @@ function addPlayer() {
     document.getElementById("newPlayer").value = "";
 
     playerList.forEach(function(item) {
-        nHTML += '<tr><td>' + item + '</tr></td>';
+        nHTML += '<tr><td>' + item + ' <button onclick="removePlayer()">Remove</button></tr></td>';
       });
     
       document.getElementById("playerList").innerHTML = nHTML
 }
-
+/*remove player button - removes player for array, reprints table and randomises the rotation */
+function removePlayer() {
+   
+} 
 /* on load array team list population */
 window.onload = function() {
     var nHTML = '';
     playerList.forEach(function(item) {
-        nHTML += '<tr><td>' + item + '</tr></td>';
+        nHTML += '<tr><td>' + item + ' <button onclick="removePlayer()">Remove</button></tr></td>';
       });
     
       document.getElementById("playerList").innerHTML = nHTML
@@ -27,7 +30,7 @@ window.onload = function() {
 
 /* shuffle and print the array */
 function shufflearray() {
-        var array=playerList;
+        var array=[...playerList];
         for (var i = array.length - 1; i > 0; i--) {
             var j = Math.floor(Math.random() * (i + 1));
             var temp = array[i];
