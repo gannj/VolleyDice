@@ -1,6 +1,6 @@
 Volleyball Dice
 
-Volleyball dice was created for volleyball teams to randomise their rotations.
+Volleyball rotation randomiser.
 
 Created by: Jared Tan
 
