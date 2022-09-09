@@ -41,6 +41,8 @@ body {
 	width: 200px;
 	text-align: center;
 	border-collapse: collapse;
+	empty-cells: show;
+	height: 25px;
 }
 
 #randombutton {

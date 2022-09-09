@@ -26,6 +26,13 @@ window.onload = function() {
       });
     
       document.getElementById("playerList").innerHTML = nHTML
+    document.getElementById("r1").innerHTML = "";
+    document.getElementById("r2").innerHTML = "";
+    document.getElementById("r3").innerHTML = "";
+    document.getElementById("r4").innerHTML = "";
+    document.getElementById("r5").innerHTML = "";
+    document.getElementById("r6").innerHTML = "";
+
   };
 
 /* shuffle and print the array */
