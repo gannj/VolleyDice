@@ -14,13 +14,15 @@ body {
 }
 
 .footer {
-	margin-top:auto; 
+	display: flex;
+  	vertical-align: middle; 
 	background-color: gray;
 	position: fixed;
   	bottom: 0px;
 	width: 100%;
 	padding: 10px;
 	margin: 0;
+	align-items: center;
   }
 
 .inputTable {
