@@ -28,64 +28,68 @@
     <div class="header">
         <div id="logo"></div>
         <h1>🏐 VOLLEYDICE 🎲</h1>
+        <p> Fill out your team list (6-7 players). Click 'Randomise!' to generate a rotation.</p>
+
     </div>
 <!-- team input table-->
-<div class="inputTable">
-    <p> Fill out your team list (6-7 players). Click 'Randomise!' to generate a rotation.</p>
 
-    <div class="addPlayer">
-        <input type="text" id="newPlayer" placeholder="Player Name"><button onclick="addPlayer()">Add!</button>
-    </div>
-
-    <table id="playerTable">
-     <thead>
-         <tr>
-            <th>Players</th>
-            </tr>
-        </thead>
-        <tbody id="playerList">
-        </tbody>
-    </table>
-
-    
-    <!-- randomise button-->
-    <button id="randombutton" type="submit" onclick="shufflearray();" class="btn btn-primary btn-lg">
-        <!--<img src="icons/dice.png"></img>-->
-        <b>Randomise!</b>
-    </button>
-</div>       
+<div class="teamTables">
+    <div class="inputTable">
+      <div class="playerList">
+        <div class="addPlayer">
+            <input type="text" id="newPlayer" placeholder="Player Name"><button onclick="addPlayer()">Add!</button>
+        </div>
+        <div>
+          <table id="playerTable">
+          <thead>
+              <tr>
+                  <th>Players</th>
+                  </tr>
+              </thead>
+              <tbody id="playerList">
+              </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- randomise button-->
+      <button id="randombutton" type="submit" onclick="shufflearray();" class="btn btn-primary btn-lg">
+          <!--<img src="icons/dice.png"></img>-->
+          <b>Randomise!</b>
+      </button>
+  </div>       
 
 <!-- print rotation table -->
-<h3>Randomised Team Rotation:</h3>
-<table class="tg"> 
-<thead> 
-  <tr>
-    <th class="tg-0lax"><b>4 - Opposite / Setter</b></th> 
-    <th class="tg-0lax"><b>3 - Middle</b></th>
-    <th class="tg-0lax"><b>2 - Pass Hit</b></th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td class="tg-0lax" id="r4"></td>
-    <td class="tg-0lax" id="r2"></td>
-    <td class="tg-0lax" id="r3"></td>
-  </tr>
-  <tr>
-    <td class="tg-0lax"><b>5 - Pass Hit</b></td>
-    <td class="tg-0lax"><b>6 - Libero / Middle</b></td>
-    <td class="tg-0lax"><b>1 - Setter</b></td>
-  </tr>
-  <tr>
-    <td class="tg-0lax" id="r5"></td>
-    <td class="tg-0lax" id="r6"></td>
-    <td class="tg-0lax" id="r1"></td>  
-  </tr> 
-</tbody>
-</table>
-        
+    <div class="randomisedTeam">
+    <h3>Randomised Team Rotation:</h3>
+    <table class="tg"> 
+    <thead> 
+      <tr>
+        <th class="tg-0lax"><b>4 - Opposite / Setter</b></th> 
+        <th class="tg-0lax"><b>3 - Middle</b></th>
+        <th class="tg-0lax"><b>2 - Pass Hit</b></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="tg-0lax" id="r4"></td>
+        <td class="tg-0lax" id="r2"></td>
+        <td class="tg-0lax" id="r3"></td>
+      </tr>
+      <tr>
+        <td class="tg-0lax"><b>5 - Pass Hit</b></td>
+        <td class="tg-0lax"><b>6 - Libero / Middle</b></td>
+        <td class="tg-0lax"><b>1 - Setter</b></td>
+      </tr>
+      <tr>
+        <td class="tg-0lax" id="r5"></td>
+        <td class="tg-0lax" id="r6"></td>
+        <td class="tg-0lax" id="r1"></td>  
+      </tr> 
+    </tbody>
+    </table>
+    </div>
  </div>                           
-            
+     
 <div class="footer">           
                 <img class="pepegaImage" src=icons/pepega.png title="Powered by Pepega" alt="Powered by Pepega" > &nbsp;Jared T &copy; 08/2022 &nbsp;></img>
                 <a href="https://www.instagram.com/jareds.pretty.tan/">
@@ -94,6 +98,6 @@
                         </svg>
                     </a>
                     <a href="https://www.instagram.com/jareds.pretty.tan/">@<u>jareds.pretty.tan</u></a>
-            </div>
-     </body> 
+                  </div>
+</body> 
 </html>
